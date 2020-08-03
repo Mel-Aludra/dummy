@@ -1,0 +1,138 @@
+/* Blocs */
+
+.menuContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: calc(100% - 36px);
+    padding: 10px 18px 10px 18px;
+}
+
+.menuLinksContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid white;
+    padding-top: 10px;
+}
+
+.menuLinksSubContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.menuLinksRightSide {
+    justify-content: flex-end;
+}
+
+.siteTitleBloc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.burgerMenu {
+    display: flex;
+    flex-direction: column;
+    width: 34px;
+}
+
+.burgerMenu:hover {
+    cursor: pointer;
+}
+
+.burgerMenu div {
+    height: 2px;
+    background-color: white;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Actions du menu */
+
+.menuLinksSubContainer a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 15px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+.menuLinksSubContainer a:hover, .activeButton {
+    border-color: white !important;
+}
+
+.menuLinksSubContainer a svg {
+    margin-right: 4px;
+}
+
+.menuLinksSubContainer a svg, .menuLinksSubContainer a span {
+    color: white;
+    fill: white;
+    font-variant: small-caps;
+    font-size: 16px;
+}
+
+.menuLinksSubContainer a:hover svg, .menuLinksSubContainer a:hover span, .activeButton svg, .activeButton span {
+    color: white !important;
+    fill: white !important;
+    text-shadow: 0 0 12px rgb(255, 220, 234) !important;
+}
+
+@media all AND (max-width: 900px) {
+
+    .menuLinksContainer {
+        border: none;
+    }
+
+    .menuLinksSubContainer {
+        flex-direction: row;
+    }
+
+    .menuLinksSubContainer a {
+        padding: 5px 0 5px 0;
+        align-items: flex-start;
+    }
+
+}
+
+@media all AND (max-width: 600px) {
+
+    .menuLinksSubContainer {
+        flex-direction: column;
+    }
+
+    .menuLinksSubContainer a {
+        padding: 5px 0 5px 0;
+        align-items: flex-start;
+        width: 100%;
+        margin: 5px 0 5px 0;
+    }
+
+}
+
+/* Titre */
+
+.menuContainer p {
+    color: white;
+    font-size: 20px;
+    font-variant: small-caps;
+    margin: 6px 4px 10px 3px;
+    text-shadow: 0 0 12px rgb(255, 220, 234);
+}
+
+.menuContainer p a {
+    color: white;
+    font-size: 20px;
+    font-variant: small-caps;
+}

@@ -1,0 +1,207 @@
+form.centerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.formElement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.formElement input, .formElement select {
+    position: relative;
+    border: 2px solid #40282B;
+    border-radius: 5px;
+    padding: 0 5px 0 5px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: calc(100% - 10px);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.formElement select {
+    height: 44px;
+    font-weight: normal;
+    color: #40282B;
+    width: 100%;
+}
+
+.formElement.small {
+    width: calc(50% - 5px);
+    margin-right: 10px;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.formElement label {
+    left: 8px;
+    position: absolute;
+    z-index: 2;
+    color: #40282B;
+    font-size: 13px;
+    pointer-events: none;
+    transition: all 0.2s;
+}
+
+.formElement input:focus {
+    border-color: #c2959f;
+    outline: none;
+}
+
+.formElement input:focus ~ label, label.asFocused {
+    margin: -15px 0 0 0;
+    left: 4px;
+    font-size: 10px;
+    color: #c2959f;
+}
+
+form input[type=submit] {
+    border: 1px solid #40282B;
+    border-radius: 5px;
+    background-color: #c2959f;
+    color: #40282B;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    margin-top: 10px;
+    box-shadow: 0 0 9px 0 rgba(0,0,0,0.85);
+    width: 100%;
+    max-width: 250px;
+    cursor: pointer;
+}
+
+form input[type=submit]:hover {
+    background-color: #40282B;
+    color: white;
+}
+
+.jobsSelection {
+    display: flex;
+    flex-direction: row;
+}
+
+.roleContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 2px solid #40282B;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: rgba(128, 79, 86, 0.40);
+    transition: all 0.3s;
+}
+
+.roleContainer:hover, .roleContainer.chosen {
+    background-color: rgba(128, 79, 86, 0.70);
+}
+
+.roleContainer h3 {
+    color: #e3e3e3;
+    text-align: center;
+    margin: 10px 0 4px 0;
+}
+
+.roleContainer:hover h3, .roleContainer.chosen h3  {
+    color: white;
+}
+
+.jobsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 5px;
+    width: calc(100% - 10px);
+}
+
+.jobsContainer img {
+    width: 50px;
+    height: 50px;
+    margin: 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 3px;
+    filter: brightness(0.7);
+    transition: all 0.3s;
+}
+
+.jobsContainer img:hover, .jobsContainer img.chosen {
+    filter: brightness(1.5);
+    cursor: pointer;
+}
+
+.jobsContainer img.nonAvailable {
+    filter: brightness(0.3);
+    cursor: not-allowed;
+}
+
+.consecutiveBlocsForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.consecutiveBlocsForm .all {
+    width: 100%;
+}
+
+.consecutiveBlocsForm .half {
+    width: calc(48% - 10px);
+}
+
+.consecutiveBlocsForm .tier {
+    width: calc(33% - 10px);
+}
+
+.consecutiveBlocsForm .twoTiers {
+    width: calc(66% - 10px);
+}
+
+.consecutiveBlocsForm .all, .consecutiveBlocsForm .half, .consecutiveBlocsForm .tier, .consecutiveBlocsForm .twoTiers {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+@media all AND (max-width: 650px) {
+    .consecutiveBlocsForm {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .consecutiveBlocsForm .half, .consecutiveBlocsForm .tier, .consecutiveBlocsForm .twoTiers {
+        width: calc(100% - 10px);
+        flex-direction: column;
+    }
+
+    .formElement {
+        max-width: none;
+    }
+
+    .formElement.small {
+        width: calc(100% - 5px);
+        max-width: none;
+    }
+
+    .jobsSelection {
+        flex-direction: column;
+    }
+}

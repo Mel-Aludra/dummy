@@ -1,0 +1,100 @@
+.logContainer {
+
+}
+
+.logContainer p {
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.fightResultSummary {
+    width: 50%;
+    border: 2px solid #40282B;
+    border-radius: 5px;
+    background-color: rgba(64, 40, 43, 0.70);
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.dpsDisplayContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dpsBigResult {
+    font-size: 40px;
+    font-weight: bolder;
+    color: #c2959f !important;
+    margin-left: 10px;
+    font-variant: small-caps;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dpsDisplayContainer img {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logContainer table {
+    color: white;
+    border-spacing: unset;
+}
+
+.logContainer table th {
+    font-weight: normal;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-variant: small-caps;
+}
+
+.logContainer table td, .logContainer table th {
+    font-size: 14px;
+    border-bottom: 1px solid rgba(194, 149, 159, 0.41);
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.logContainer table tr.clickTr:hover {
+    cursor: pointer;
+    background-color: rgba(194, 149, 159, 0.20);
+}
+
+.logContainer table tr.clickTr input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-overflow-ellipsis: ellipsis;
+    cursor: pointer;
+}
+
+.logContainer table tr.clickTr input::selection {
+    background-color: rgba(194, 149, 159, 0.20);
+}
+
+
+.dummyStatusContainer {
+    text-align: right;
+}
+
+.dummyStatusContainer svg {
+    fill: rgba(194, 149, 159, 0.4);
+    width: 100px;
+    transform: rotate(10deg);
+    height: 100px;
+    margin: -70px -10px -15px -70px;
+}
+
+@media all AND (max-width: 900px) {
+    .fightResultSummary {
+        width: calc(100% - 20px);
+    }
+}
